@@ -4,9 +4,9 @@
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-role :app, %w{106.14.150.188}
-role :web, %w{106.14.150.188}
-role :db,  %w{106.14.150.188}
+role :app, %w{xiaozhu@106.14.150.188}
+role :web, %w{xiaozhu@106.14.150.188}
+role :db,  %w{xiaozhu@106.14.150.188}
 
 set :deploy_to, "/home/xiaozhu/www/react_api"
 
