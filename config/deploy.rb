@@ -28,6 +28,11 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 set :branch, :master
 
+# Default value for :linked_files is []
+set :linked_files, fetch(:linked_files, []).push('config/database.yml')#, '.ruby-version', '.ruby-gemset')
+# Default value for linked_dirs is []
+set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle')
+
 namespace :deploy do
 
   after :restart, :clear_cache do
