@@ -2,7 +2,7 @@
 lock '3.3.5'
 
 set :application, 'react_api'
-set :repo_url, 'git@github.com:xiaohesong/react_api.git'
+set :repo_url, 'https://github.com/xiaohesong/react_api.git'
 
 set :user, 'xiaozhu'
 set :scm, :git
