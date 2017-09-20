@@ -6,6 +6,11 @@
 
 # Extended Server Syntax
 # ======================
+set :user, "xiaozhu"
+set :application, 'react_api'
+
+
+set :branch, 'master'
 # This can be used to drop a more detailed server definition into the
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
