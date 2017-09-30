@@ -1,7 +1,9 @@
 class RolesController < ApplicationController
+  respond_to :json
+
   def index
     @roles = Role.all
-    render json: @roles
+    respond_with @roles, location: nil
   end
 
   def create
