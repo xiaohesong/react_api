@@ -14,9 +14,9 @@ set :branch, 'master'
 # This can be used to drop a more detailed server definition into the
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
-role :app, %w{xiaozhu@106.14.150.188}
-role :web, %w{xiaozhu@106.14.150.188}
-role :db,  %w{xiaozhu@106.14.150.188}
+role :app, %w{xiaozhu@106.14.150.188 -p 922}
+role :web, %w{xiaozhu@106.14.150.188 -p 922}
+role :db,  %w{xiaozhu@106.14.150.188 -p 922}
 
 set :deploy_to, "/home/xiaozhu/www/react_api"
 
