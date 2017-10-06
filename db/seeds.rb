@@ -5,11 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# 100.times.each do |i|
-#   Customer.create!(name: "name#{i}", phone: "phone#{i}", password: 'test', address: "xihu#{i}")
-# end
+Customer.create!(name: "超级管理员", phone: "test", password: 'test', address: "xihu", roleIds: ["1"])
+100.times.each do |i|
+  Customer.create!(name: "name#{i}", phone: "phone#{i}", password: 'test', address: "xihu#{i}")
+end
 
-# Role.create!(name: '超级管理', permission: ["role-create", "role-index", "role-edit", "user-create", "user-edit", "user-index"])
-# 5000.times.each do |i|
-#   Role.create!(name: "超级管理#{i}", permission: ["role-create", "role-index", "role-edit", "user-create", "user-edit", "user-index"])
-# end
+Role.create!(name: '超级管理', permission: ["role-create", "role-index", "role-edit", "user-create", "user-edit", "user-index"])
+5000.times.each do |i|
+  Role.create!(name: "超级管理#{i}", permission: ["role-create", "role-index", "role-edit", "user-create", "user-edit", "user-index"])
+end
