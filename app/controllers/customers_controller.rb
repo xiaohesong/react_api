@@ -1,8 +1,7 @@
 class CustomersController < ApplicationController
   def index
     @customers = Customer.all.ransack(params[:q]).result.order("id asc").page(params[:page])
-    puts "customer count is #{@customers.count}"
-    render json: @customers
+    # respond_with @customers, location: nil
   end
 
   def create
