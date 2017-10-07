@@ -8,8 +8,8 @@ default: &default
 development:
   <<: *default
   database: react_api_dev
-  username: postgres
-  password: oss
+  username: xiaohesong
+  password:
 
 staging:
   <<: *default
