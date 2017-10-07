@@ -1,3 +1,3 @@
 json.array! @roles do |role|
-  json.name role.name
+  json.(role, :name, :permission, :id)
 end
