@@ -1,6 +1,13 @@
 class CustomersController < ApplicationController
+  include ActionController::MimeResponds
+
   def index
-    @customers = Customer.all.ransack(params[:q]).result.order("id asc").page(params[:page])
+    result = Customer.all.ransack(params[:q]).result.order("id asc")
+    @customers = result.page(params[:page])
+    respond_to do |format|
+      format.csv { send_data csv_garbled(result.to_csv), filename: "绑定信息解锁/锁定记录-#{Date.today}.csv" }
+      format.json {respond_with @customers, location: nil}
+    end
     # respond_with @customers, location: nil
   end
 
