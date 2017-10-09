@@ -21,4 +21,4 @@
 
 .ruby-version
 .gemset-version
-config/database.yml
+/config/database.yml
